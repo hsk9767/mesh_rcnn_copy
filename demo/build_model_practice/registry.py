@@ -1,5 +1,5 @@
 from typing import Dict, Optional
-from detectron2.utils.registry import Registry
+from detectron2.modeling import build_model
 
 class RG(object):
         def __init__(self, name: str) -> None:
@@ -17,8 +17,9 @@ class RG(object):
                 return ret
 
 
-META_ARCH_REGISTRY = Registry("META_ARCH")
-def bm_practice(cfg):
+print("Registry")
+print(Registry)
+def build_model(cfg):
     meta_arch = cfg.MODEL.META_ARCHITECTURE
     return META_ARCH_REGISTRY.get(meta_arch)(cfg)
     
