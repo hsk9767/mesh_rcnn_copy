@@ -226,10 +226,11 @@ if __name__ == "__main__":
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
     
-    from detectron2.modeling import build_model as bm
-    model = bm(cfg)
-    print("MODEL")
+    from build_model_practice import registry as bm
+    model = bm.bm_practice(cfg)
+    print("\n\n\n\n\n MODEL\n\n\n\n\n")
     print(model)
+    
     ####
     
     
