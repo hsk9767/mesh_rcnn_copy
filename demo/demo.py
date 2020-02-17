@@ -226,9 +226,9 @@ if __name__ == "__main__":
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
     
-    import build_model_practice.registry as bm
-    model = bm.bm_practice(cfg)
-    print("\n\n\n\n\n MODEL\n\n\n\n\n")
+    from detectron2.modeling import build_model
+    model = build_model(cfg)
+    print("\n\n\n\nMODEL\n\n\n\n\n")
     print(model)
     
     ####
