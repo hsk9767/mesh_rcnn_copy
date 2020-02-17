@@ -221,6 +221,10 @@ if __name__ == "__main__":
     print(cfg)
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
+    
+    from detectron2.modeling import build_model
+    model = build_model(cfg)
+    print(model)
     ####
     demo = VisualizationDemo(
         cfg, vis_highest_scoring=args.onlyhighest, output_dir=os.path.join(args.output, im_name)
