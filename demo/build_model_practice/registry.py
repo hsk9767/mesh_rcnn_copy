@@ -1,5 +1,5 @@
 from typing import Dict, Optional
-from fvcore.common.registry import Registry
+from detectron2.utils.registry import Registry
 
 class RG(object):
         def __init__(self, name: str) -> None:
