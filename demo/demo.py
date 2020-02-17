@@ -219,6 +219,8 @@ if __name__ == "__main__":
     im_name = args.input.split("/")[-1].split(".")[0]
     ####
     print(cfg)
+    predictor = DefaultPredictor(cfg)
+    print(predictor.model)
     ####
     demo = VisualizationDemo(
         cfg, vis_highest_scoring=args.onlyhighest, output_dir=os.path.join(args.output, im_name)
