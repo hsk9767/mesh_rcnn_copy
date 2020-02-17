@@ -226,7 +226,7 @@ if __name__ == "__main__":
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
     
-    from build_model_practice import registry as bm
+    import build_model_practice.registry as bm
     model = bm.bm_practice(cfg)
     print("\n\n\n\n\n MODEL\n\n\n\n\n")
     print(model)
