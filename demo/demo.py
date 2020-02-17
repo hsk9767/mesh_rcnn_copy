@@ -217,15 +217,24 @@ if __name__ == "__main__":
     cfg = setup_cfg(args)
 
     im_name = args.input.split("/")[-1].split(".")[0]
+    
+    
+    
+    
     ####
     print(cfg)
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
     
-    from detectron2.modeling import build_model
-    model = build_model(cfg)
+    from detectron2.modeling import build_model as bm
+    model = bm(cfg)
+    print("MODEL")
     print(model)
     ####
+    
+    
+    
+    
     demo = VisualizationDemo(
         cfg, vis_highest_scoring=args.onlyhighest, output_dir=os.path.join(args.output, im_name)
     )
