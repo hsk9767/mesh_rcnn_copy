@@ -235,7 +235,8 @@ if __name__ == "__main__":
     from build_model_practice import bm_practice
     model = bm_practice(cfg)
     print("\n\n\n\nMODEL_2\n\n\n\n\n")
-    print(model)
+    for idx , name in enumerate(model.named_modules()):
+        print(idx, '->', name)
     
     ####
     
