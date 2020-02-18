@@ -222,7 +222,7 @@ if __name__ == "__main__":
     
     
     ####
-    print("\n\n\n\n\ncfg\n\n\n\n\n\")
+    print("\n\n\n\n\ncfg\n\n\n\n\n")
     print(cfg)
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
