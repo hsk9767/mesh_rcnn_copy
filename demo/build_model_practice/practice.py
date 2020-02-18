@@ -8,7 +8,7 @@ and expected to return a `nn.Module` object.
 """
 
 
-def bm_parctice(cfg):
+def bm_practice(cfg):
     """
     Build the whole model architecture, defined by ``cfg.MODEL.META_ARCHITECTURE``.
     Note that it does not load any weights from ``cfg``.
