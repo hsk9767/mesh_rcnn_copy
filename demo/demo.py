@@ -222,13 +222,17 @@ if __name__ == "__main__":
     
     
     ####
-    print(cfg)
     predictor = DefaultPredictor(cfg)
     print(predictor.model)
     
     from detectron2.modeling import build_model
     model = build_model(cfg)
     print("\n\n\n\nMODEL\n\n\n\n\n")
+    print(model)
+    
+    from build_model_practice import bm_practice
+    model = bm_practice(cfg)
+    print("\n\n\n\nMODEL_2\n\n\n\n\n")
     print(model)
     
     ####
