@@ -237,9 +237,9 @@ if __name__ == "__main__":
     print("\n\n\n\nMODEL_2\n\n\n\n\n")     
     from detectron2.modeling import GeneralizedRCNN
     model_2 = GeneralizedRCNN(cfg)
+    for idx , name in enumerate(model_2.named_modules()):
+        print(idx, '->', name)
     
-    if model_1 == model_2:
-        print("ONLY GENERALIZED CNN")
     ####
     
     
