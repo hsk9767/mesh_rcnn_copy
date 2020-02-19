@@ -228,16 +228,18 @@ if __name__ == "__main__":
     print(predictor.model)
     
     from detectron2.modeling import build_model
-    model = build_model(cfg)
+    model_1 = build_model(cfg)
     print("\n\n\n\nMODEL\n\n\n\n\n")
-    print(model)
+    print(model_1)
     print("\n\n\n\nMODEL_MODULE\n\n\n\n\n")
-    for idx , name in enumerate(model.named_modules()):
+    for idx , name in enumerate(model_1.named_modules()):
         print(idx, '->', name)
     print("\n\n\n\nMODEL_2\n\n\n\n\n")     
     from detectron2.modeling import GeneralizedRCNN
-    model = GeneralizedRCNN(cfg)
-    print(model)
+    model_2 = GeneralizedRCNN(cfg)
+    
+    if model_1 == model_2:
+        print("ONLY GENERALIZED CNN")
     ####
     
     
