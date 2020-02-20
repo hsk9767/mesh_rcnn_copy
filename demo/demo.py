@@ -234,12 +234,6 @@ if __name__ == "__main__":
     print("\n\n\n\nMODEL_MODULE\n\n\n\n\n")
     for idx , name in enumerate(model_1.named_modules()):
         print(idx, '->', name)
-    print("\n\n\n\nMODEL_2\n\n\n\n\n")     
-    from detectron2.modeling import GeneralizedRCNN
-    model_2 = GeneralizedRCNN(cfg)
-    for idx , name in enumerate(model_2.named_modules()):
-        print(idx, '->', name)
-    
     ####
     
     
